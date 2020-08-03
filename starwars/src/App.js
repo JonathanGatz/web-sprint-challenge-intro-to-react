@@ -16,6 +16,8 @@ const App = () => {
       document.removeEventListener("click", listener);
     }
   }, [])
+
+  
  
 
 
@@ -33,9 +35,13 @@ const App = () => {
       {setCount && <getCharacters getCharacters={count} />}
       <h1 className="Header">Characters</h1>
       <button onClick={e => setCount(true)}>Find a Character</button>
+      <container class= "info-container">
+        <h1>'name'</h1>
+      </container>
     </div>
   );
 }
+
 
 
 
