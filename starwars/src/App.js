@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 
+
+
 const App = () => {
+
+  
+  const [count, setCount] = useState(false)
+
+  useEffect(() =>{
+    console.log(`Hello ${getCharacters}`)
+  })
+
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -11,9 +21,14 @@ const App = () => {
 
   return (
     <div className="App">
+      {setCount && <counter count={count} />}
       <h1 className="Header">Characters</h1>
+      <button onClick={e => setCount(true)}>Find a Character</button>
     </div>
   );
 }
+
+
+
 
 export default App;
