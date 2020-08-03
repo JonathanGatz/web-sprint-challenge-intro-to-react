@@ -2,14 +2,13 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 
 
-
 const App = () => {
 
   
   const [count, setCount] = useState(false)
 
   useEffect(() =>{
-    console.log(`Hello ${getCharacters}`)
+    console.log(`Hello`)
   })
 
   // Try to think through what state you'll need for this app before starting. Then build out
