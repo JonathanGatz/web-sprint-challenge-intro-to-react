@@ -7,9 +7,19 @@ const App = () => {
   
   const [count, setCount] = useState(false)
 
-  useEffect(() =>{
-    console.log(`Hello`)
-  })
+  useEffect((getCharacters) =>{
+    console.log(`Hello`);
+    const listener = e => console.log("click")
+    document.addEventListener("click", listener);
+    return () => {
+      console.log(`CLEAN UP HELLO ${getCharacters}`)
+      document.removeEventListener("click", listener);
+    }
+  }, [])
+ 
+
+
+  
 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -20,7 +30,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {setCount && <counter count={count} />}
+      {setCount && <getCharacters getCharacters={count} />}
       <h1 className="Header">Characters</h1>
       <button onClick={e => setCount(true)}>Find a Character</button>
     </div>
