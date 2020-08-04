@@ -1,49 +1,51 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
+import axios from "axios";
+import Cards from "./components/Character";
+//import {Row} from "reactstrap"
+
+
+
+  // Try to think through what state you'll need for this app before starting. Then build out
+  // the state properties here.
 
 
 const App = () => {
 
   
-  const [count, setCount] = useState(false)
+  const [data, setData] = useState([])
 
-  useEffect((getCharacters) =>{
-    console.log(`Hello`);
-    const listener = e => console.log("click")
-    document.addEventListener("click", listener);
-    return () => {
-      console.log(`CLEAN UP HELLO ${getCharacters}`)
-      document.removeEventListener("click", listener);
-    }
-  }, [])
 
+
+useEffect(() => {
+  axios.get("https://cors-anywhere.herokuapp.com/swapi.py4e.com/api/species")
+  .then(response => {
+    console.log(response.data.results)
+    setData(response.data.results)
+  })
+},[])
+
+
+
+return (
   
- 
+  <div className="App">
+    *******
+    <h1 className="Header">Species of the UNIVERSE</h1>
+    *******
+    <Cards characterArray = {data}/> 
+  </div>
+);
+}
 
-
-  
-
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  return (
-    <div className="App">
-      {setCount && <getCharacters getCharacters={count} />}
-      <h1 className="Header">Characters</h1>
-      <button onClick={e => setCount(true)}>Find a Character</button>
-      <container class= "info-container">
-        <h1>'name'</h1>
-      </container>
-    </div>
-  );
-}
+  // ********************************* I finally got my project back to somewhat normal. 
 
 
 
 
-
-export default App;
+  export default App;

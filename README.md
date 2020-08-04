@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React compartmentalizes code in order to work with a few components rather than thousands  
+
 1. Describe component state.
+
+It's both an array and a functioon in one. They act in conjuction with one another 
 
 1. Describe props.
 
+these are arguments passed into components 
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+It egffects anything outside the scope of it's function. It's run after the function is ran. Good to clean up code (stop clicks)
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
