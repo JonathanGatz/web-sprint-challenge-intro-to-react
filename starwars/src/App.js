@@ -50,18 +50,6 @@ return (
 
 
 
-  
-
-  // return (
-  //   <div style={{ color, border: `4px solid ${color}`, padding: "8px" }}>
-  //     <div>User id is {props.id}</div>
-  //     <div> User is dressed in {color}</div>
-  //     <button onClick={e => setColor("red")}>red</button>
-  //     <button onClick={e => setColor("green")}>green</button>
-  //   </div>
-  // );
-
-
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
