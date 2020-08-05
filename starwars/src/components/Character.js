@@ -1,6 +1,8 @@
 // Write your Character component here
 import React from 'react';
 import {Card, CardTitle, CardSubtitle, Container, Row, Col } from 'reactstrap'
+//import styled from "styled-components";
+
 
 
 function Cards(props){
@@ -27,7 +29,12 @@ function Cards(props){
             </Row>
             </Container>
     )
+
 };
+
+
+
+
 
 
 export default Cards;

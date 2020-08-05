@@ -14,6 +14,7 @@ const App = () => {
 
   
   const [data, setData] = useState([])
+  const [color, setColor] = useState("red");
 
 
 
@@ -28,15 +29,37 @@ useEffect(() => {
 
 
 return (
-  
+
+  <div style={{ color, border: `10px solid ${color}`, padding: "25px" }}>
   <div className="App">
     *******
+    <div style={{border: `50px`, padding: "50px"}}></div>
     <h1 className="Header">Species of the UNIVERSE</h1>
     *******
     <Cards characterArray = {data}/> 
+    <button onClick={e => setColor("red")}>Space Red</button>
+    <button onClick={e => setColor("green")}>Space Green</button>
+    <button onClick={e => setColor("blue")}>Space Blue</button>
+    <button onClick={e => setColor("white")}>Hide All Data</button>
+    </div>
+      {/* <button>red</button>
+      <button>green</button> */}
   </div>
 );
 }
+
+
+
+  
+
+  // return (
+  //   <div style={{ color, border: `4px solid ${color}`, padding: "8px" }}>
+  //     <div>User id is {props.id}</div>
+  //     <div> User is dressed in {color}</div>
+  //     <button onClick={e => setColor("red")}>red</button>
+  //     <button onClick={e => setColor("green")}>green</button>
+  //   </div>
+  // );
 
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 

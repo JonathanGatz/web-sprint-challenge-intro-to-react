@@ -1,8 +1,27 @@
 .App {
   text-align: center;
+  background-color: hsl(0, 100%, 50%, .3);
+  border-bottom-right-radius: 35%;
+  
 }
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
+  background-color: hsl(180, 100%, 50%, .6);
 }
+
+.container {
+  background-color: rgb(0, 17, 255, .3);
+  border-bottom-right-radius: 35%;
+}
+
+
+
+/* h1 {
+  color: black;
+  width: 50%
+} */
+
+
+
 /* write your parent styles in here for your App.js */
