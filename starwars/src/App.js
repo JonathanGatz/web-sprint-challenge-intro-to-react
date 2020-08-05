@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from "axios";
 import Cards from "./components/Character";
+import styled from 'styled-components'
 //import {Row} from "reactstrap"
 
 
@@ -47,6 +48,12 @@ return (
   </div>
 );
 }
+
+const button = styled.button`
+flex-direction: row;`
+
+const h1 = styled.h1`
+width: 50%;`
 
 
 
